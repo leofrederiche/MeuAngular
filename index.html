@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+
+	<!-- Head padrão -->
+	<title>AngularJS Exemplo - 1</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+
+	<!-- Importando Angular.js -->
+	<script src="angular.min.js"></script>
+
+	<!-- BootStrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<nav>
+		<span><a href="exemplo - 2.html">Próximo</a></span>
+	</nav>
+
+	<h1>AngularJS <small>Exemplo - 1</small></h1><br><br>
+
+	<h3>Operações matematicas e concatenação</h3>
+	<div class="alert alert-info" role="alert">
+		<p>Nothing here {{'yet' + '!'}}</p>
+		<small>
+			Neste exemplo as palavras 'yet' e '!' estão sendo concatenadas via Angular.
+		</small>
+	</div>
+
+	<div class="alert alert-info" role="alert">
+		<p>1 + 2 = {{ 1 + 2 }}</p>
+		<small>
+			O resultado da soma está sendo feita em Angular.
+		</small>
+	</div>
+
+	<div class="alert alert-info" role="alert">
+		<p>Meu nome é {{ "Leonardo" + " Camp" }} e tenho {{ 10 + 7 }} anos.</p>
+		<small>Tanto o nome e o sobrenome, como a idade, estão sendo exibidos pelo Framework.</small>
+	</div>
+	
+	<nav>
+		<span><a href="exemplo - 2.html">Próximo</a></span>
+	</nav>
+
+</body>
+</html>

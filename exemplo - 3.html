@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myCtrl">
+<head >
+	<!-- Head padrão -->
+	<title>AngularJS Exemplo - 3</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+
+	<!-- Importando Angular.js -->
+	<script src="angular.min.js"></script>
+
+	<!-- Importando Jquery -->
+	<script src="jquery-2.1.4.min.js"></script>
+
+	<!-- BootStrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<nav>
+		<span><a href="exemplo - 2.html">Anterior</a></span>
+		<span><a href="exemplo - 4.html">Próximo</a></span>
+	</nav>
+
+	<h1>AngularJS Exemplo - 3</h1>
+	<br>
+
+	<h3>Controller, multiplas variaveis e Array</h3>
+
+	<div class="alert alert-info">
+		
+		Primeiro nome: <input type="text" ng-model="firstName">
+		Sobrenome: <input type="text" ng-model="lastName">
+		<p>Nome completo: {{ firstName + " " + lastName }}</p>
+
+		<script>
+			var app = angular.module('myApp',[]);
+			app.controller('myCtrl', function($scope){
+				$scope.firstName = "Leonardo";
+				$scope.lastName = "Camp";
+			});
+		</script>
+
+ 		<small>
+ 			Aqui, o nome e sobrenome pré exibido está sendo exibido de um mini controller em Jquery (javascript).
+ 		</small>
+
+	</div>
+
+
+	<div class="alert alert-info" ng-init="real=3.15; dolar=1">
+		<p>U$ {{dolar}} é equivalente a R$ {{real}}</p>
+		<small>As duas variaveis estão sendo definida no 'ng-init' que defini uma pré declaração de variaveis</small>
+
+		<br><br>
+
+		<p>Quantidade em Reais: <input type="text" ng-model="quantReal"> são U{{ quantReal / real | currency }} dolares</p>
+	</div>
+
+	<div class="alert alert-info" ng-init="pages=[1,27,53,89,2,64]">
+		<p> Livro pagina {{pages[2]}} </p>
+		<small>
+			O numero da página é o valor núemro 2 do array 'pages[1,27,53,89,2,64]'. Começando a contagem do 0
+		</small>
+
+		<br><br>
+
+		<p>Quantidade de valores no array: {{pages.length}}</p>
+		<small>A quantidade de item é exibida pela propiedade '.length' no array 'pages' </small>
+	</div>
+
+	<nav>
+		<span><a href="exemplo - 2.html">Anterior</a></span>
+		<span><a href="exemplo - 4.html">Próximo</a></span>
+	</nav>
+
+</body>
+</html>
